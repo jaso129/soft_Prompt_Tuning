@@ -1,0 +1,75 @@
+[2024-07-23 11:41:15,999] - ==================================================
+[2024-07-23 11:41:16,037] - dev data: ./data/cls/agnews/seed15/dev.txt
+[2024-07-23 11:41:16,037] - test data: None
+[2024-07-23 11:41:16,037] - 
+	dataset = agnews
+	task = cls
+	test_file = None
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-07-23 11:41:16,037] - ==================================================
+[2024-07-23 11:41:16,037] - Instruction placeholder: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+<prompt>
+[2024-07-23 11:41:16,037] - ---------------------Evolving prompt-------------------
+
+[2024-07-23 11:41:16,082] - ==================================================
+[2024-07-23 11:41:16,082] - 
+	dataset = agnews
+	task = cls
+	test_file = ./data/cls/data/agnews/test.txt
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-07-23 11:41:16,082] - ==================================================
+[2024-07-23 11:41:16,164] - ---loading prompts from data/cls/agnews/seed15/prompts_batched.json

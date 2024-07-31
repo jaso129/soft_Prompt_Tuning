@@ -1,0 +1,1230 @@
+[2024-07-01 12:37:04,076] - ==================================================
+[2024-07-01 12:37:04,076] - dev data: ./data/cls/agnews/seed15/dev.txt
+[2024-07-01 12:37:04,076] - test data: None
+[2024-07-01 12:37:04,076] - 
+	dataset = agnews
+	task = cls
+	test_file = None
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-07-01 12:37:04,076] - ==================================================
+[2024-07-01 12:37:04,076] - Instruction placeholder: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+<prompt>
+[2024-07-01 12:37:04,076] - ---------------------Evolving prompt-------------------
+
+[2024-07-01 12:37:04,104] - ==================================================
+[2024-07-01 12:37:04,105] - 
+	dataset = agnews
+	task = cls
+	test_file = ./data/cls/data/agnews/test.txt
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-07-01 12:37:04,105] - ==================================================
+[2024-07-01 12:37:04,118] - -----evaluating initial population and paraphrasing topk---------
+[2024-07-01 12:37:04,911] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Give the main topic of the news article and then choose from World, Sports, Tech and Business.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:40:10,529] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Determine the the topic of the item and then choose from World, Sports, Business and Tech.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:41:36,652] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Your task is to classify the news item as "World", "Sports", "Tech" or "Business".
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:42:25,205] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Based on the main theme of given the news article, categorize it into World, Sports, Business, or Tech.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:43:12,588] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Determine the theme of the news item. Choose from World, Sports, Business and Tech.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:44:10,433] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Your objective is to classify a news article into one of four themes: World, Sports, Business and Tech.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:48:13,270] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Your task is to identify the primary topic of the news artical and choose from World, Sports, Business and Tech.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:48:41,634] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Your job is to determine whether a news article belongs to the World, Sports, Business, or Tech category based on its primary theme.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:49:42,465] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+You will be given a news article and asked to classify it as World, Sports, Business and Tech, depending on its main topic.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:50:48,892] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Your responsibility is to assign a news article to one of four categories: World, Sports, Business, or Tech, based on its main idea.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:53:52,064] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Categorize the news article into one of four categories: World, Sports, Business, or Tech, based on its content.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:55:21,863] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Choose a word from World, Sports, Business and Tech to categorize the given text.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:56:07,834] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+You will be required to classify a news article as World, Sports, Business, or Tech based on its primary topic.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:56:36,010] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+In this task, you are given a news article. Your task is to classify the article to one out of the four topics "World", "Sports", "Business", "Tech" if the article"s main topic is relevant to the world, sports, business, and technology, correspondingly. If you are not sure about the topic, choose the closest option.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 12:59:29,293] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Classify the topic of the following news as "World", "Sports", "Tech" or "Business".
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:00:13,869] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category of each input (e.g. Tech, Sports, World, Business).
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:03:16,237] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category (tech, sports, world, business) of the given information.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:03:43,020] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+categorize the articles according to their topic: Tech, Sports, World, Business.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:07:19,644] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+classify each input into one of the following categories: Tech, Sports, World, or Business.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:11:11,211] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category (e.g. sports, tech, business, etc.) of each news article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:13:06,835] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category of the given news article, which the friend correctly identified for all five input-output pairs.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:13:52,474] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category of the text (e.g. Technology, Sports, World, Business).
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:14:21,672] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+provide the category for the given news article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:15:55,081] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the type of news article (Tech, Business, Sports) based on the given summary.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:17:15,801] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+classify the input into one of three categories (Tech, Business, or Sports).
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:21:15,636] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the appropriate category for each article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:22:47,985] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category of the article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:24:20,995] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+correctly identify the category for each of the inputs, given the following categories: Tech, Business, Sports.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:27:09,276] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the type of news article based on the given input.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:28:33,144] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+classify the given information into one of three categories: tech, business, or sports.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:32:21,859] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+classify each input-output pair according to the topic.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:34:43,742] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the topic of the text.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:37:46,795] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+determine the topic of the given text.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:40:51,077] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the topic of a given article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
+[2024-07-01 13:43:00,687] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+identify the category of the article.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:

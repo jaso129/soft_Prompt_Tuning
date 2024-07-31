@@ -1,0 +1,43 @@
+[2024-06-20 14:12:28,956] - ==================================================
+[2024-06-20 14:12:28,957] - dev data: None
+[2024-06-20 14:12:28,957] - test data: None
+[2024-06-20 14:12:28,957] - 
+	dataset = agnews
+	task = cls
+	test_file = None
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = None
+	output = outputs/cls/agnews/eval/alpaca
+	language_model = alpaca
+	position = demon
+	sample_num = 100
+	seed = 5
+	budget = 10
+	popsize = 10
+	evo_mode = de
+	llm_type = davinci
+	initial = all
+	initial_mode = None
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = None
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = [News Category]: {Category}
+- World: Focus on international relations, global conflicts, and major political events. Keywords: [UN, NATO, summit, treaty, conflict]
+- Sports: Emphasize sports events, teams, and athlete achievements. Keywords: [Olympics, World Cup, NBA, FIFA, athlete]
+- Business: Discuss economic trends, company news, and financial markets. Keywords: [stocks, merger, IPO, revenue, economy]
+- Tech: Cover technological advancements, product releases, and tech industry news. Keywords: [AI, startup, cybersecurity, smartphone, software]
+	write_step = 10
+	sel_mode = wheel
+[2024-06-20 14:12:28,957] - ==================================================
+[2024-06-20 14:12:28,957] - Instruction placeholder: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+<prompt>

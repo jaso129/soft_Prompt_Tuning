@@ -1,0 +1,108 @@
+[2024-06-19 21:21:28,778] - ==================================================
+[2024-06-19 21:21:28,778] - dev data: ./data/cls/agnews/seed15/dev.txt
+[2024-06-19 21:21:28,779] - test data: None
+[2024-06-19 21:21:28,779] - 
+	dataset = agnews
+	task = cls
+	test_file = None
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-06-19 21:21:28,779] - ==================================================
+[2024-06-19 21:21:28,779] - Instruction placeholder: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+<prompt>
+[2024-06-19 21:21:28,779] - ---------------------Evolving prompt-------------------
+
+[2024-06-19 21:21:28,798] - ==================================================
+[2024-06-19 21:21:28,798] - 
+	dataset = agnews
+	task = cls
+	test_file = ./data/cls/data/agnews/test.txt
+	batch_size = 32
+	max_new_tokens = 128
+	prompt_num = 0
+	dev_file = ./data/cls/agnews/seed15/dev.txt
+	output = outputs/cls/agnews/alpaca/all/ga/bd10_top10_para_topk_init/topk/davinci/seed15
+	language_model = alpaca
+	position = demon
+	sample_num = 500
+	seed = 15
+	budget = 10
+	popsize = 10
+	evo_mode = ga
+	llm_type = davinci
+	initial = all
+	initial_mode = para_topk
+	para_mode = None
+	ckpt_pop = None
+	template = v1
+	pred_mode = logits
+	client = False
+	cache_path = data/cls/agnews/seed15/prompts_batched.json
+	setting = default
+	donor_random = False
+	ga_mode = topk
+	content = 
+	write_step = 10
+	sel_mode = wheel
+[2024-06-19 21:21:28,798] - ==================================================
+[2024-06-19 21:21:28,808] - -----evaluating initial population and paraphrasing topk---------
+[2024-06-19 21:21:29,519] - ### tokenized_datasets...example: Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Give the main topic of the news article and then choose from World, Sports, Tech and Business.
+
+### Input:
+Arafat expulsion has never been closer: Israeli FM JERUSALEM - Foreign Minister Silvan Shalom said Thursday that Israel had never been closer to expelling veteran Palestinian leader Yasser Arafat from his West Bank headquarters.
+
+### Response:
+World
+
+### Input:
+Two US runners reach 100 hurdles final ATHENS, Greece - World champion Perdita Felicien and two United States runners reached the final of the 100-meter hurdles Monday, an event that lost Gail Devers to injury a day earlier.
+
+### Response:
+Sports
+
+### Input:
+U.S., EU Spar Over Airbus, Boeing Aid  WASHINGTON (Reuters) - The United States and Europe on  Wednesday filed tit-for-tat World Trade Organization complaints  over billions of dollars in subsidies for top aircraft  manufacturers Airbus and Boeing.
+
+### Response:
+Business
+
+### Input:
+Veritas buys KVault Software in \$225M deal Storage and backup application vendor Veritas Software Corp. is acquiring e-mail archiving vendor KVault Software Ltd. (KVS) to bolster its offerings to customers.
+
+### Response:
+Tech
+
+### Input:
+OPEC Thwarts Climate Aid for Poor Nations - WWF (Reuters) Reuters - OPEC nations and Saudi\Arabia in particular are standing in the way of getting\financial help to developing countries to cope with global\warming, the World Wide Fund for Nature (WWF) said on Thursday.
+
+### Response:
