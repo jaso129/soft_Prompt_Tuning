@@ -225,7 +225,8 @@ class T5Dataset:
             Returns:
                 Dataloader: Torch Dataloader with preprocessed input text & label.
             """
-            
+            print('return_test:',return_test)
+
             if task in ['amazon']: # amazon not available with hugging face
                 df = pd.read_csv('../datasets/src/data/'+task+'/'+split+'.csv', header=None)
                 df = df.rename(columns={0: "label", 1: "title", 2: "content"})
@@ -239,6 +240,7 @@ class T5Dataset:
                 dataset = load_dataset('stsb_multi_mt', name='en', split=split if split=='train' else 'dev')
             else:
                 if task not in self.glue_datasets and task not in self.superglue_datasets:
+                    print('ag_news datasets loadding')
                     dataset = load_dataset(task, split=split)
                 else:
                     benchmark = 'glue' if task not in self.superglue_datasets else 'super_glue'
@@ -264,6 +266,7 @@ class T5Dataset:
             
             # Selecting k subset of the samples (if requested)
             if k!=-1:
+                print('我是k：',k)
                 dataset = self.select_subset_ds(dataset, k=k)
 
             if k==-1 and split!='train' and self.task=='multirc':
@@ -289,6 +292,7 @@ class T5Dataset:
             
             # Creating an extra test set from the selected data split
             else:
+                
                 N = len(dataset)
                 dataset_val = dataset.select(np.arange(0, N//2))
                 dataset_test = dataset.select(np.arange(N//2, N))
